@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'manrope', sans-serif;
+}
+
+.h1-style {
+  color: red;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* INÍCIO MENU DESKTOP*/
+nav {
+  background-color: rgb(0, 0, 0);
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 90px;
+  font-weight: bold;
+}
+
+.foto-logo {
+  width: 100px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+a.active,
+a:hover {
+  background-color: white;
+  transition: 0.5s;
+  color: black;
+  font-weight: bold;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-left: 40px;
+  margin-right: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 30px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+/* FIM MENU DESKTOP*/
+
+/* menu mobile */
+@media (max-width: 858px) {
+  nav {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: red;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: white;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* filmes mobile section*/
+@media (max-width: 858px) {
+  #filmes {
+    padding-top: 90px;
+    text-align: center;
+  }
+  .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container > div {
+    margin: 10px auto;
+  }
+}
+
+/* filmes desktop section */
+@media (min-width: 952px) {
+  #filmes {
+    height: 100vh;
+    text-align: center;
+    padding: 30px;
+  }
+  .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .container > div {
+    margin: 30px auto;
+  }
+}
+
+/*  series mobile section */
+@media (max-width: 858px) {
+  #series {
+    padding-top: 50px;
+    text-align: center;
+    /* padding: 30px; */
+  }
+  .container-2 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container-2 > div {
+    margin: 4px auto;
+  }
+}
+
+/* series Desktop section */
+@media (min-width: 952px) {
+  #series {
+    margin-top: 900px;
+    text-align: center;
+  }
+  .container-2 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .container-2 > div {
+    margin: 30px auto;
+  }
+}
+
+/* footer */
+footer {
+  background: black;
+  text-align: center;
+  padding: 30px;
+}
+
+.logo-footer {
+  width: 150px;
+}
+
+.redes {
+  width: 50px;
+}
