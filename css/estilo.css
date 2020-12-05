@@ -171,6 +171,11 @@ a:hover {
   .container > div {
     margin: 30px auto;
   }
+
+  div > img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+  }
 }
 
 /*  series mobile section */
@@ -247,4 +252,10 @@ p {
 .btn-movie:hover {
   background: black;
   color: red;
+}
+
+.setinha {
+  position: relative;
+
+  float: right;
 }
